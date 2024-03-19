@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+    {{ form_start(form) }}
+<div class="editp">
+<div class="fgn">
+    <div class="form-group">
+        <label class="nfg" for="name">Name:</label>
+        {{ form_widget(form.name,{
+            'attr':{
+                'class':'form-control',
+                'placeholder': 'Product name'
+            }
+        }) }}
+    </div>
+    </div>
+
+<div class="fgp">
+    <div class="form-group">
+        <label class="pfg" for="price">Price:</label>
+        {{ form_widget(form.price,{
+            'attr':{
+                'class':'form-control',
+                'placeholder': 'Product price'
+            }
+        }) }}
+    </div>
+    </div>
+
+<div class="fgd">
+    <div class="form-group">
+        <label class="dfg" for="date_release">Date release:</label>
+        {{ form_widget(form.date_release,{
+            'attr':{
+                'class':'form-control'
+            }
+        }) }}
+    </div>
+    </div>
+
+<div class="fgi">
+    <div class="form-group">
+        <label class="ifg" for="image">Image:</label>
+        {{ form_widget(form.image,{
+            'attr':{
+                'class':'form-control-file'
+            }
+        }) }}
+    </div>
+</div>
+
+    <input type="submit" name="edit_product" value="Edit" class="btnbtn-primary"/>
+    {{ form_end(form) }}
+    </div>
+{% endblock %}

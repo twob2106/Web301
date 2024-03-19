@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<a href="{{ path('product_admin') }}">Game manager</a>
+<a href="{{ path('ninsw_new') }}">Create a new nintendo switch</a>
+
+    <div class="tba" data-example-id="striped-table">
+        <table class="tbb">
+            <thead class="tbtr">
+            <tr>
+                <th class="idp">ID</th>
+                <th class="np">Product</th>
+                <th class="pp">Price</th>
+                <th class="drp">Date Release</th>
+                <th class="imgp">Image</th> 
+                <th class="ap">Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for ninsw in ninsw %}
+                <tr>
+                    <th class="idp" scope="row">{{ ninsw.id }}</th>
+                    <td class="np">{{ ninsw.name }}</td>
+                    <td class="pp">{{ ninsw.price }}</td>
+                    <td class="drp">{{ ninsw.dateRelease|date('F j, Y') }}</td>
+                    <td>
+                        {% if ninsw.image %}
+                            <img src="{{ asset('images/' ~ ninsw.image) }}" alt="{{ ninsw.name }}" width="100">
+                        {% else %}
+                            No Image
+                        {% endif %}
+                    </td>
+                    <td class="ap">
+                        <a href="{{ path('product_edit', {'id': ninsw.id}) }}" class='btn btn-default'>Edit</a>
+                        <a href="{{ path('product_delete', {'id': ninsw.id}) }}" class='btn btn-danger'>Delete</a>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="containerdtg">
+    <div class="rowdtg2">
+        <div class="col-md-6imgdtg" style="flex: 1;">
+            {% if ninsw.image %}
+                <img src="{{ asset('images/' ~ ninsw.image) }}" alt="{{ ninsw.name }}" class="img-thumbnail">
+            {% endif %}
+        </div>
+        <div class="col-md-6ifdtg" style="flex: 1;">
+            <div>
+            <div class="product-info">
+                <h4 class="h4dtg">Hardware</h4>
+                <h3 class="h31dtg">{{ ninsw.name }}</h3>
+                    <h3 class="h32dtg">{{ ninsw.price }}</h3>
+
+                <button class="btndtg">Add to cart</button>
+                <h5 class="h5dtg">This item will be shipped to your address.</h5>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

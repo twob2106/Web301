@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+   <style>
+    a {
+        text-decoration: none;
+    }
+</style>
+
+   <main>
+    <div class="hdimg">
+        <img class="hdimgg" src="{{ asset('images/gameslide.png') }}" alt="" width="100%">
+    </div>
+    <div class="bs-example" data-example-id="striped-table">
+        <div class="product-container">
+            {% for productItem in product %}
+                <a href="{{ path('product_details', {'id': productItem.id}) }}" class="product-item">
+                    {% if productItem.image %}
+                        <img class="imggnn" src="{{ asset('images/' ~ productItem.image) }}" alt="{{ productItem.name }}" width="100">
+                    {% else %}
+                        No Image
+                    {% endif %}
+                    <div class="infog2">
+                        <h3 class="h31g">{{ productItem.name }}</h3>
+                        <h5 class="h5g2">{{ productItem.dateRelease|date('F j, Y') }}</h5>
+                        <h3 class="h32g2">${{ productItem.price }}</h3>
+                        <h4 class="h4g2">Nintendo Switch</h4>
+                    </div>
+                </a>
+                {% if loop.index % 5 == 0 %}
+                    </div><div class="product-container">
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

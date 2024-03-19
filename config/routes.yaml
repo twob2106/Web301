@@ -1,0 +1,21 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+user_login:
+    path: /login
+    controller: App\Controller\SecurityController::login
+profile:
+    path: /profile
+    controller: App\Controller\ProfileController::index
+# config/routes.yaml
+app_cart:
+    path: /cart
+    controller: App\Controller\CartController::index
+    methods: [GET]
+product_all:
+    path: /products
+    controller: App\Controller\ProductController::allAction
+product_order:
+    path: /order
+    controller: App\Controller\ProductController::allAction
+

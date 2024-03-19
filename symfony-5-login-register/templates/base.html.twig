@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Nintendo Shop{% endblock %}</title>
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+            <link rel="stylesheet" href="{{ asset('css/header.css') }}">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        {% endblock %}
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+            <script src="{{ asset('js/abc.js') }}"></script>
+            
+        {% endblock %}
+
+  <div class="twoheader">
+    <header class="upper-header">
+      <div class="imglogo">
+        <a href="{{ path('product_home') }}">
+    <img src="{{ asset('images/logo.png') }}" alt="" width="100">
+</a>
+
+
+
+        <div class="search-container">
+          <button type="submit" onclick="searchFunction()" class="search-button">
+              <i class="fas fa-search"></i> 
+          </button>
+            <input type="text" id="searchInput" placeholder="Search">
+        </div>
+      <div class="cart-icon" id="cartIcon">
+         <i class="fas fa-shopping-cart"></i>
+        <span class="cart-label">Cart</span>
+      </div>
+      <div class="login-icon" id="loginIcon">
+        <i class="fas fa-sign-in-alt"></i>
+        <span class="icon-label">Login / Sign up</span>
+      </div>
+      </div>
+      </header>
+    <header class="lower-header">
+<div class="games-icon" id="gamesIcon">
+    <i class="fas fa-gamepad"></i>
+    <span class="games-label">Games</span>
+</div>
+
+<script>
+    // Lấy phần tử theo id
+    var gamesIcon = document.getElementById('gamesIcon');
+
+    // Lắng nghe sự kiện click
+    gamesIcon.addEventListener('click', function() {
+        // Chuyển hướng người dùng tới http://127.0.0.1:8000/product/all
+        window.location.href = 'http://127.0.0.1:8000/product/all';
+    });
+</script>
+
+      <div class="switch-icon" id="switchIcon">
+        <i class="fas fa-gamepad"></i>
+        <span class="switch-label">Switch</span>
+      </div>
+     <div class="new-icon" id="newIcon">
+        <i class="fas fa-newspaper"></i>
+        <span class="new-label">News</span>
+      </div>
+    </header>
+    </div>
+        
+<script>
+    // Lấy phần tử theo id
+    var gamesIcon = document.getElementById('switchIcon');
+
+    // Lắng nghe sự kiện click
+    gamesIcon.addEventListener('click', function() {
+        // Chuyển hướng người dùng tới http://127.0.0.1:8000/product/all
+        window.location.href = 'http://127.0.0.1:8000/ninsw/all';
+    });
+</script>
+
+
+
+
+
+
+    </head>
+    <body>
+        {% block body %}{% endblock %}
+        
+    </body>
+
+</html>

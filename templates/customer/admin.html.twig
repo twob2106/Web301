@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<a href="{{ path('product_admin') }}">Game manager</a>
+<a href="{{ path('ninsw_admin') }}">Nintendo switch manager</a>
+<a href="{{ path('ninsw_new') }}">Create a new nintendo switch</a>
+
+    <div class="tba" data-example-id="striped-table">
+        <table class="tbb">
+            <thead class="tbtr">
+            <tr>
+                <th class="idp">ID</th>
+                <th class="np">Name customer</th>
+                <th class="drp">Birth day</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for customer in customer %}
+                <tr>
+                    <th class="idp" scope="row">{{ customer.id }}</th>
+                    <td class="np">{{ customer.name }}</td>
+                    <td class="drp">{{ customer.birthDate|date('F j, Y') }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+{% endblock %}

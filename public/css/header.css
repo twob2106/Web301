@@ -1,0 +1,706 @@
+.twoheader {
+  font-family: "Helvetica", sans-serif;
+color: #484848;
+
+}
+
+.upper-header {
+background-color: white;
+display: flex;
+}
+.lower-header {
+  border-bottom: 1px solid #e3b5b5;
+  width: 100%;
+  padding-bottom: 15px;
+  display: flex;
+  justify-content: center; /* Căn giữa các thành phần theo chiều ngang */
+  align-items: center;
+  background-color: white;
+}
+.imglogo {
+display: flex;
+width: 100%;
+border-bottom: 1px solid #e3b5b5; 
+}
+.logo {
+width: 6%;
+margin-left: -10px;
+margin-top: -10px;
+}
+.search-container {
+position: relative;
+margin-right: 200px;
+margin-top: 10px;
+margin-bottom: 10px;
+width: 75%;
+}
+
+input[type="text"] {
+border: none;
+padding: 10px;
+font-size: 16px;
+outline: none;
+border-bottom: 1px solid #151414; /* Gạch dưới ban đầu */
+width: 450px; /* Độ rộng của ô tìm kiếm */
+box-sizing: border-box; /* Tính cả border vào kích thước tổng của phần tử */
+}
+input[type="text"]:focus {
+border-bottom: 1px solid #bb1717; /* Dấu gạch dưới không thay đổi khi tương tác */
+}
+button {
+padding: 10px 15px;
+background-color: transparent;
+border: none;
+cursor: pointer;
+}
+button i {
+font-size: 16px;
+color: #0077c8;
+}
+.search-button {
+padding: 10px;
+background-color: transparent; /* Màu nền trong suốt */
+border: none;
+cursor: pointer;
+transition: background-color 0.3s; /* Tạo hiệu ứng chuyển đổi màu nền */
+}
+.search-button:hover {
+background-color: white; /* Màu nền khi di chuột qua */
+}
+
+/* Đoạn CSS này dùng để điều chỉnh kích thước của biểu tượng kính lúp */
+.search-button i {
+font-size: 16px;
+color: black; /* Màu của biểu tượng */
+}
+/* Định dạng biểu tượng cart */
+.search-container {
+position: relative;
+margin-top: 4px;
+margin-bottom: 10px;
+width: 75%;
+}
+
+
+/* CSS cho nút login */
+.cart-icon {
+cursor: pointer;
+display: flex;
+align-items: center;
+padding-bottom: 10px;
+margin-right: 20px;
+}
+.cart-icon i {
+font-size: 20px; /* Kích thước của biểu tượng */
+margin-right: 5px; /* Khoảng cách giữa biểu tượng và chữ */
+}
+.cart-label {
+font-size: 17px;
+font-family: Arial, sans-serif;
+}
+
+.logr {
+  width: 100%;
+  text-decoration: none;
+}
+
+/* CSS cho nút login */
+.login-icon {
+cursor: pointer;
+display: flex;
+align-items: center;
+padding-bottom: 10px;
+
+
+}
+.login-icon i {
+font-size: 23px; /* Kích thước của biểu tượng */
+margin-right: 5px; /* Khoảng cách giữa biểu tượng và chữ */
+}
+.icon-label {
+font-size: 17px;
+font-family: Arial, sans-serif;
+}
+
+.games-icon,
+.switch-icon,
+.new-icon {
+display: flex;
+align-items: center;
+justify-content: center; /* Căn giữa nội dung bên trong */
+width: 30%; /* Độ rộng của biểu tượng */
+height: 30px; /* Chiều cao của biểu tượng */
+cursor: pointer;
+}
+
+.games-icon i,
+.switch-icon i,
+.new-icon i {
+width: 20px; /* Kích thước hình ảnh */
+height: 5px;
+margin-right: 5px; /* Khoảng cách giữa hình ảnh và chữ */
+}
+.switch-icon i {
+color: darkred;
+}
+
+.games-label,
+.switch-label,
+.new-label {
+font-size: 17px;
+padding-top: 10px; /* Khoảng cách từ biểu tượng xuống chữ */
+font-family: Arial, sans-serif;
+}
+
+
+
+.slideshow {
+padding-bottom: 50px;
+  width: 100%;  
+border-bottom: 1px solid #e3b5b5; 
+}
+* {box-sizing:border-box}
+/* thiết lập style cho slideshow container */
+.slideshow-container {
+ max-width: 2000px;
+ position: relative;
+ margin: auto;
+}
+/* ẩn hình ảnh cho phần tử slideshow */
+.mySlides {
+ display: none;
+}
+/* thiết kế nút mũi tên*/
+.prev, .next {
+ cursor: pointer;
+ position: absolute;
+ top: 50%;
+ width: auto;
+ margin-top: -22px;
+ padding: 16px;
+ color: white;
+ font-weight: bold;
+ font-size: 18px;
+ transition: 0.6s ease;
+ border-radius: 0 3px 3px 0;
+ user-select: none;
+}
+/* thiết kế nút mũi tên next nằm phía bên phải */
+.next {
+ right: 0;
+ border-radius: 3px 0 0 3px;
+}
+/* hiệu ứng thay đổi background khi hover vào nút mũi tên*/
+.prev:hover, .next:hover {
+ background-color: rgba(0,0,0,0.8);
+}
+/* thiết lập style  nút tròn điều khiển*/
+.dot {
+ cursor: pointer;
+ height: 15px;
+ width: 15px;
+ margin: 0 2px;
+ background-color: #bbb;
+ border-radius: 50%;
+ display: inline-block;
+ transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+ background-color: #717171;
+}
+/* tạo hiệu ứng chuyển động fade */
+.fade {
+ -webkit-animation-name: fade;
+ -webkit-animation-duration: 1.5s;
+ animation-name: fade;
+ animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+ from {opacity: .4}
+ to {opacity: 1}
+}
+@keyframes fade {
+ from {opacity: .4}
+ to {opacity: 1}
+}
+
+
+
+
+
+
+
+.bocuagms {
+display: flex;
+justify-content: center;
+align-items: center;
+font-family: "Helvetica", sans-serif;
+color: #484848;
+border-bottom: 1px solid #e3b5b5;
+padding-top: 30px;
+padding-bottom: 30px;
+}
+.gamingsystem {
+text-align: center; /* Căn giữa nội dung trong phần tử cha */
+max-width: 80%; /* Độ rộng tối đa */
+display: flex;
+flex-direction: column;
+align-items: center; /* Căn giữa theo chiều ngang */
+}
+.imggaming {
+width: 100%; /* Chiều rộng của ảnh */
+max-width: 1000px; /* Độ rộng tối đa */
+border-radius: 20px;
+}
+.h2 {
+margin-top: 20px; /* Khoảng cách với h2 */
+}
+h1 {
+margin-right: 740px;
+}
+h2 {
+margin-right: 350px;
+}
+.btngs {
+background-color: red;
+color: white;
+border-radius: 20px;
+}
+
+
+
+
+.shopgame {
+width: 100%;
+padding-top: 30px;
+padding-bottom: 30px;
+border-bottom: 1px solid #e3b5b5; 
+}
+.maingame {
+display: flex; /* Sử dụng Flexbox để căn chỉnh các phần tử theo chiều ngang */
+justify-content: space-between; /* Phân chia khoảng trống đều giữa các phần tử */
+ padding-left: 20px;
+ padding-right: 20px;
+}
+.featured {
+padding-left: 25px;
+font-family: "Helvetica", sans-serif;
+color: #484848;
+}
+
+
+.game1 {
+border: 1px solid black;
+width: 17%;
+border-radius: 20px;
+}
+.imggn1 {
+width: 100%;
+border-top-left-radius: 20px; /* Làm tròn góc trên bên trái */
+border-top-right-radius: 20px; /* Làm tròn góc trên bên phải */
+}
+.game1:hover .imggn1 {
+transform: translateY(-5px); /* Di chuyển hình ảnh lên 5px khi di chuột vào testshop */
+transition: transform 0.3s ease; /* Tạo hiệu ứng di chuyển mượt mà */
+}
+.infog1 {
+font-family: "Helvetica", sans-serif;
+color: #484848;
+}
+.h31g1, .h5g1, .h32g1, .h4g1 {
+margin-left: 10px;
+}
+.h5g1, .h4g1 {
+font-family: "Times New Roman", Times, serif;
+}
+
+.game1:hover .h31g1 {
+color: red; /* Thay đổi màu sang đỏ khi di chuột vào */
+}
+
+
+
+.game2 {
+border: 1px solid black;
+width: 17%;
+border-radius: 20px;
+}
+.imggn2 {
+width: 100%;
+border-top-left-radius: 20px; /* Làm tròn góc trên bên trái */
+border-top-right-radius: 20px; /* Làm tròn góc trên bên phải */
+}
+
+.game2:hover .imggn2 {
+transform: translateY(-5px); /* Di chuyển hình ảnh lên 5px khi di chuột vào testshop */
+transition: transform 0.3s ease; /* Tạo hiệu ứng di chuyển mượt mà */
+}
+.infog2 {
+font-family: "Helvetica", sans-serif;
+color: #484848;
+
+}
+.h31g2, .h5g2, .h32g2, .h4g2 {
+margin-left: 10px;
+}
+.h5g2, .h4g2 {
+font-family: "Times New Roman", Times, serif;
+}
+
+.game2:hover .h31g2 {
+color: red; /* Thay đổi màu sang đỏ khi di chuột vào */
+}
+
+
+
+.game3 {
+border: 1px solid black;
+width: 17%;
+border-radius: 20px;
+}
+.imggn3 {
+width: 100%;
+border-top-left-radius: 20px; /* Làm tròn góc trên bên trái */
+border-top-right-radius: 20px; /* Làm tròn góc trên bên phải */
+}
+
+.game3:hover .imggn3 {
+transform: translateY(-5px); /* Di chuyển hình ảnh lên 5px khi di chuột vào testshop */
+transition: transform 0.3s ease; /* Tạo hiệu ứng di chuyển mượt mà */
+}
+.infog3 {
+font-family: "Helvetica", sans-serif;
+color: #484848;
+}
+.h31g3, .h5g3, .h32g3, .h4g3 {
+margin-left: 10px;
+}
+.h5g3, .h4g3 {
+font-family: "Times New Roman", Times, serif;
+}
+
+.game3:hover .h31g3 {
+color: red; /* Thay đổi màu sang đỏ khi di chuột vào */
+}
+
+
+.game4 {
+border: 1px solid black;
+width: 17%;
+border-radius: 20px;
+}
+.imggn4 {
+width: 100%;
+border-top-left-radius: 20px; /* Làm tròn góc trên bên trái */
+border-top-right-radius: 20px; /* Làm tròn góc trên bên phải */
+}
+
+.game4:hover .imggn4 {
+transform: translateY(-5px); /* Di chuyển hình ảnh lên 5px khi di chuột vào testshop */
+transition: transform 0.3s ease; /* Tạo hiệu ứng di chuyển mượt mà */
+}
+.infog4 {
+font-family: "Helvetica", sans-serif;
+color: #484848;
+}
+.h31g4, .h5g4, .h32g4, .h4g4 {
+margin-left: 10px;
+}
+.h5g4, .h4g4 {
+font-family: "Times New Roman", Times, serif;
+}
+
+.game4:hover .h31g4 {
+color: red; /* Thay đổi màu sang đỏ khi di chuột vào */
+}
+
+
+
+.game5 {
+border: 1px solid black;
+width: 17%;
+border-radius: 20px;
+}
+.imggn5 {
+width: 100%;
+border-top-left-radius: 20px; /* Làm tròn góc trên bên trái */
+border-top-right-radius: 20px; /* Làm tròn góc trên bên phải */
+}
+
+.game5:hover .imggn5 {
+transform: translateY(-5px); /* Di chuyển hình ảnh lên 5px khi di chuột vào testshop */
+transition: transform 0.3s ease; /* Tạo hiệu ứng di chuyển mượt mà */
+}
+.infog5 {
+font-family: "Helvetica", sans-serif;
+color: #484848;
+}
+.h31g5, .h5g5, .h32g5, .h4g5 {
+margin-left: 10px;
+}
+.h5g5, .h4g5 {
+font-family: "Times New Roman", Times, serif;
+}
+
+.game5:hover .h31g5 {
+color: red; /* Thay đổi màu sang đỏ khi di chuột vào */
+}
+
+
+
+
+.news {
+width: 100%;
+padding-top: 30px;
+padding-bottom: 30px;
+}
+.mainnews {
+display: flex; /* Sử dụng Flexbox để căn chỉnh các phần tử theo chiều ngang */
+justify-content: space-between; /* Phân chia khoảng trống đều giữa các phần tử */
+ padding-left: 20px;
+ padding-right: 20px;
+}
+.hdnews {
+padding-left: 25px;
+font-family: "Helvetica", sans-serif;
+color: #484848;
+}
+
+.news1 {
+width: 40%;
+margin-left: 100px;
+}
+.imgnews1 {
+width: 100%;
+border-radius: 20px;
+}
+.h41n1, .h3n1, .h42n1, .btnnews1 {
+font-family: "Helvetica", sans-serif;
+color: #484848;
+}
+.btnnews1 {
+color: red;
+text-decoration: underline red; /* Tạo gạch chân màu đỏ */
+text-decoration-thickness: 2px; /* Độ dày của gạch chân */
+border: none; /* Loại bỏ viền */
+background: none; /* Loại bỏ nền */
+padding: 0; /* Loại bỏ padding */
+cursor: pointer; /* Biến con trỏ thành hình cúc tay khi di chuột qua */
+}
+/* Màu chữ của h3 khi di chuột vào .news1 */
+.news1:hover .h3n1 {
+color: red;
+}
+
+
+
+.news2 {
+width: 40%;
+margin-right: 100px;
+}
+.imgnews2 {
+width: 100%;
+border-radius: 20px;
+}
+.h41n2, .h3n2, .h42n2, .btnnews2 {
+font-family: "Helvetica", sans-serif;
+color: #484848;
+}
+.btnnews2 {
+color: red;
+text-decoration: underline red; /* Tạo gạch chân màu đỏ */
+text-decoration-thickness: 2px; /* Độ dày của gạch chân */
+border: none; /* Loại bỏ viền */
+background: none; /* Loại bỏ nền */
+cursor: pointer; /* Biến con trỏ thành hình cúc tay khi di chuột qua */
+padding: 0; /* Loại bỏ padding */
+}
+.h42n2{
+padding-bottom: 20px;
+}
+/* Màu chữ của h3 khi di chuột vào .news1 */
+.news2:hover .h3n2 {
+color: red;
+}
+
+.sanam {
+padding-top: 30px;
+padding-left: 117px;
+}
+.sana {
+background-color: red;
+color: white;
+border-radius: 10px;
+}
+
+
+
+
+
+.tba {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.tbb {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tbtr th,
+.tbtr td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.tbtr th {
+  background-color: #f2f2f2;
+}
+
+.tbtr th.idp,
+.tbtr td.idp {
+  width: 5%;
+}
+
+.tbtr th.np,
+.tbtr td.np {
+  width: 40%;
+}
+
+.tbtr th.pp,
+.tbtr td.pp {
+  width: 5%;
+}
+
+.tbtr th.drp,
+.tbtr td.drp {
+  width: 10%;
+}
+
+.tbtr th.imgp,
+.tbtr td.imgp {
+  width: 20%;
+}
+
+.tbtr th.ap,
+.tbtr td.ap {
+  width: 10%;
+}
+
+
+
+
+
+
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Các sản phẩm sẽ căng ra để lấp đầy toàn bộ chiều rộng */
+  margin-left: 2%; /* Lề âm 1% để tạo khoảng cách 1% với lề ngoài */
+  margin-right: 2%;
+  margin-top: 50px;
+}
+
+.product-item {
+  width: calc(17% - 1%); /* Tính toán width để trừ đi 1% cho margin-left */
+  margin-left: 1%; /* Khoảng cách giữa các sản phẩm là 1% */
+  margin-bottom: 20px; /* Khoảng cách theo chiều dọc */
+  border: #151414 solid 1px;
+  border-radius: 20px;
+}
+
+.imggnn {
+  width: 100%;
+  border-top-left-radius: 20px; /* Làm tròn góc trên bên trái */
+  border-top-right-radius: 20px; /* Làm tròn góc trên bên phải */
+}
+
+
+
+
+
+
+
+
+.containerdtg{
+  display: flex;
+  justify-content: center; /* Căn giữa theo chiều ngang */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  width: 100%;
+  background-color: #717171;
+}
+.img-thumbnail {
+  width: 100%;
+  border-radius: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 30px;
+}
+
+
+.rowdtg2 {
+  display: flex;
+  width: 80%;
+  background-color: white;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  border-radius: 30px;
+}
+
+.product-info {
+  padding-left: 20%;
+  margin-top: 50px;
+}
+
+.h4dtg {
+  color: red;
+  border-left: 3px solid red;
+  padding-left: 10px;
+}
+.h31dtg {
+  font-size: 30px;
+  padding-bottom: 80px;
+}
+.h32dtg {
+  font-size: 30px;
+}
+.btndtg {
+  background-color: red;
+  margin-left: 30px;
+  color: white;
+  border-radius: 10px;
+}
+.h31dtg, .h32dtg, .h5dtg {
+  font-family: "Helvetica", sans-serif;
+  color: #484848
+}
+
+
+
+.editp {
+  margin-left: 30%;
+  margin-top: 100px;
+}
+.nfg, .pfg, .dfg, .ifg, .npd {
+  color: red;
+  
+}
+.btnbtn-primary {
+  width: 7%;
+  background-color: red;
+  margin-left: 250px;
+  margin-top: 50px;
+  color: white;
+  border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+

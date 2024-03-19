@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+  <h1>Create a new Product</h1>
+
+  {{ form_start(form) }}
+  {{ form_row(form.name) }}
+  {{ form_row(form.price) }}
+  {{ form_row(form.date_release) }}
+  {{ form_row(form.image) }} 
+ 
+
+  <input type="submit" value="Create" />
+  {{ form_end(form) }}
+
+  <ul>
+    <li>
+      <a href="{{ path('product_admin') }}">Back to the list</a>
+    </li>
+  </ul>
+{% endblock %}

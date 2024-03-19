@@ -1,0 +1,54 @@
+
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="containerdtg">
+    <div class="rowdtg2">
+        <div class="col-md-6imgdtg" style="flex: 1;">
+            {% if product.image %}
+                <img src="{{ asset('images/' ~ product.image) }}" alt="{{ product.name }}" class="img-thumbnail">
+            {% endif %}
+        </div>
+        <div class="col-md-6ifdtg" style="flex: 1;">
+            <div>
+                <div class="product-info">
+                    <h4 class="h4dtg">Nintendo</h4>
+                    <h3 class="h31dtg">{{ product.name }}</h3>
+                    <h3 class="h32dtg">${{ product.price|number_format(2, '.', ',') }}</h3>
+
+                    <form action="{{ path('add_to_cart') }}" method="POST">
+                        <table>
+                            <tr>
+                                <td>
+                                    <input 
+                                        type="number" 
+                                        id="quantity" 
+                                        name="quantity" 
+                                        required="required"
+                                    >
+                                </td>
+                                <td class="text-center">
+                                    <input 
+                                        type="hidden" 
+                                        id="prod_id" 
+                                        name="id" 
+                                        value="{{ product.id }}"
+                                    >
+                                    <button 
+                                        type="submit" 
+                                        class="btn btn-sm btn-primary btn-success atc">
+                                        Add to cart
+                                    </button>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+
+                    <h5 class="h5dtg">This item will be shipped to your address.</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

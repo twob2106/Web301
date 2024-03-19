@@ -1,0 +1,157 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div class="slideshow">
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+        <div class="numbertext"></div>
+                <img src="{{ asset('images/slideshow1.avif') }}" style="width:100%"> 
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext"></div>
+            <img src="{{ asset('images/slideshow2.avif') }}" style="width:100%"> 
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext"></div>
+            <img src="{{ asset('images/slideshow3.avif') }}" style="width:100%"> 
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+    </div>
+    <br>
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+</div>
+
+
+<div class="shopgame">
+
+  <h1 class="featured">Featured</h1>
+  <div class="maingame">
+  <div class="game1" id="Game1">
+    <div>
+      <div>
+      <img class="imggn1" src="{{ asset('images/games/mariowonder.avif') }}" alt="">
+      </div>
+      <div class="infog1">
+        <h3 class="h31g1">Super Mario Bros.™ Wonder</h3>
+          <h5 class="h5g1">10/20/23</h5>
+        <h3 class="h32g1">$59.99</h3>
+        <h4 class="h4g1">Nintendo Switch</h4>
+      </div>
+    </div>
+  </div>
+
+  <div class="game2" id="Game2">
+    <div>
+      <div>
+      <img class="imggn2" src="{{ asset('images/games/zeldatotk.avif') }}" alt="">
+      </div>
+      <div class="infog2">
+        <h3 class="h31g2">The Legend of Zelda™: Tears of the Kingdom</h3>
+          <h5 class="h5g2">5/12/23</h5>
+        <h3 class="h32g2">$69.99</h3>
+        <h4 class="h4g2">Nintendo Switch</h4>
+      </div>
+    </div>
+  </div>
+
+    <div class="game3" id="Game3">
+    <div>
+      <div>
+      <img class="imggn3" src="{{ asset('images/games/zeldabotw.avif') }}" alt="">
+      </div>
+      <div class="infog3">
+        <h3 class="h31g3">The Legend of Zelda™: Breath of the Wild</h3>
+          <h5 class="h5g3">3/3/17</h5>
+        <h3 class="h32g3">$59.99</h3>
+        <h4 class="h4g3">Nintendo Switch</h4>
+      </div>
+    </div>
+  </div>
+
+      <div class="game4" id="Game4">
+    <div>
+      <div>
+      <img class="imggn4" src="{{ asset('images/games/nieraotomata.avif') }}" alt="">
+      </div>
+      <div class="infog4">
+        <h3 class="h31g4">NieR:Automata The End of YoRHa Edition</h3>
+          <h5 class="h5g4">10/6/22</h5>
+        <h3 class="h32g4">$39.99</h3>
+        <h4 class="h4g4">Nintendo Switch</h4>
+      </div>
+    </div>
+  </div>
+
+        <div class="game5" id="Game5">
+    <div>
+      <div>
+      <img class="imggn5" src="{{ asset('images/games/thewitcher.avif') }}" alt="">
+      </div>
+      <div class="infog5">
+        <h3 class="h31g5">The Witcher 3: Wild Hunt</h3>
+          <h5 class="h5g5">1/28/21</h5>
+        <h3 class="h32g5">$39.99</h3>
+        <h4 class="h4g5">Nintendo Switch</h4>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+
+<div class="bocuagms">
+  <div class="gamingsystem">
+    <h1>Gaming systems</h1>
+    <div class="content">
+      <img class="imggaming" src="{{ asset('images/games/sw1.avif') }}" alt="">
+      <div class="text-content">
+        <h2>Find the perfect Nintendo Switch system for you <button class="btngs">Explore</button> </h2>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+   <div class="news" id="News">
+    <h1 class="hdnews">News</h1>
+    <div class="mainnews">
+
+    <div class="news1">
+      <div>
+      <img src="https://assets.nintendo.com/image/upload/f_auto/q_auto/dpr_1.25/c_scale,w_800/ncom/en_US/articles/2023/catch-up-on-some-of-this-years-celebrated-nintendo-switch-games/2250x1266_Ncom_GameHighlights2023_EN_copy" class="imgnews1">
+      </div>
+      <div class="infonews1">
+        <h4 class="h41n1">12/28/23</h4>
+          <h3 class="h3n1">Catch up on some of this year’s celebrated Nintendo Switch games</h3>
+        <h4 class="h42n1">If there’s one thing we’ve learned this year, it’s that 2023 was chock-full of amazing game releases. With so many adventures waiting to be had, some...</h4>
+        <button class="btnnews1">Read more</button>
+      </div>
+    </div>
+
+    <div class="news2">
+      <div>
+      <img src="https://assets.nintendo.com/image/upload/f_auto/q_auto/dpr_1.25/c_scale,w_800/ncom/en_US/articles/2023/try-before-you-buy-with-these-free-game-demos/2250x1266_featuredDemos_EN" class="imgnews2">
+      </div>
+      <div class="infonews2">
+        <h4 class="h41n2">12/27/23</h4>
+          <h3 class="h3n2">Try before you buy with these free game demos</h3>
+        <h4 class="h42n2">Have you been looking to add a few games to your library, but you’re just not sure which are right for you? Not to worry—the Nintendo Switch™...</h4>
+        <button class="btnnews2">Read more</button>
+      </div>
+    </div>
+    </div>
+    <div class="sanam">
+      <button class="sana">See all news articles</button>
+    </div>
+
+  </div>
+
+
+
+{% endblock %}
